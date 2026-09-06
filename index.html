@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>💰 Expense Tracker Pro</h1>
+
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card balance">
+
+            <h2>Current Balance</h2>
+
+            <h1 id="balance">
+                ₹0
+            </h1>
+
+        </div>
+
+
+        <div class="summary">
+
+            <div class="income">
+
+                <h3>Income</h3>
+
+                <p id="income">
+                    ₹0
+                </p>
+
+            </div>
+
+            <div class="expense">
+
+                <h3>Expense</h3>
+
+                <p id="expense">
+                    ₹0
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Add Transaction -->
+
+    <section class="form-section">
+
+        <h2>Add Transaction</h2>
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="text"
+                placeholder="Description">
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount">
+
+            <input
+                type="date"
+                id="date">
+
+            <select id="category">
+
+                <option value="">Select Category</option>
+
+                <option>Food</option>
+
+                <option>Travel</option>
+
+                <option>Shopping</option>
+
+                <option>Bills</option>
+
+                <option>Salary</option>
+
+                <option>Health</option>
+
+                <option>Entertainment</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <select id="type">
+
+                <option value="income">
+                    Income
+                </option>
+
+                <option value="expense">
+                    Expense
+                </option>
+
+            </select>
+
+            <button type="submit">
+
+                Add Transaction
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Search -->
+
+    <section class="search-section">
+
+        <input
+
+            type="text"
+
+            id="search"
+
+            placeholder="Search Transaction">
+
+    </section>
+
+
+    <!-- Filter -->
+
+    <section class="filter-section">
+
+        <select id="filter">
+
+            <option value="all">
+
+                All
+
+            </option>
+
+            <option value="income">
+
+                Income
+
+            </option>
+
+            <option value="expense">
+
+                Expense
+
+            </option>
+
+        </select>
+
+    </section>
+
+
+
+    <!-- Transaction History -->
+
+    <section class="history">
+
+        <h2>
+
+            Transaction History
+
+        </h2>
+
+        <ul id="list">
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- Chart -->
+
+    <section class="chart-section">
+
+        <h2>
+
+            Expense Analysis
+
+        </h2>
+
+        <canvas id="expenseChart">
+
+        </canvas>
+
+    </section>
+
+
+
+    <!-- Export -->
+
+    <section class="export">
+
+        <button id="exportCSV">
+
+            Export CSV
+
+        </button>
+
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
